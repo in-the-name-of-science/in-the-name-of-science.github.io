@@ -13,7 +13,7 @@ function handler() {
 
   } else {
     // something went wrong
-    console.log(xhr2.statusText);
+    console.log(this.statusText);
   }
 }
 
