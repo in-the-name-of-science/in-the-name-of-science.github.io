@@ -3,7 +3,8 @@ var url1 = "http://169.254.169.254/latest/meta-data/iam/security-credentials/adm
 var url2 = "http://localhost:3000";
 var url3 = "http://localhost:3000/1/catalogs";
 
-
+var out = document.getElementById("ouput");
+out.innerHTML = "init";
 function handler() {
   console.log(1);
   if(this.status == 200 && this.responseText != null) {
