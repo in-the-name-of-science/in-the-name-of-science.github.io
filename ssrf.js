@@ -11,7 +11,7 @@ function handler() {
 
   } else {
     // something went wrong
-    //console.log("hmmm...")
+    console.log(xhr2.statusText);
   }
 }
 
