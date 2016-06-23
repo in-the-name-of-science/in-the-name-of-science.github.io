@@ -5,6 +5,7 @@ var url3 = "http://localhost:3000/1/catalogs";
 
 var out = document.getElementById("output");
 out.innerHTML = "init";
+console.log("init");
 function handler() {
   console.log(1);
   if(this.status == 200 && this.responseText != null) {
